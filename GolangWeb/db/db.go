@@ -9,10 +9,10 @@ import (
 
 //Conecta : conecta com o Banco De Dados
 func Conecta() *sql.DB {
-	conn := "user=postgres dbname=alura_loja password=root host=localhost port=5433 sslmode=disable"
+	conn := "user=postgres dbname=alura_loja password=root host=localhost sslmode=disable"
 	db, err := sql.Open("postgres", conn)
 	checkErr(err)
-	log.Println("Connected to Database!")
+	log.Println("[Database] - Connected to Database!")
 	return db
 }
 

@@ -9,7 +9,7 @@ import (
 
 func main() {
 	routes.CarregaRotas()
-	http.ListenAndServe(":8000", nil)
+	log.Println(http.ListenAndServe(":8000", nil))
 }
 
 func checkErr(err error) {
